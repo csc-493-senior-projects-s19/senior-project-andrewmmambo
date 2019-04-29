@@ -1,5 +1,5 @@
 // written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
-
+//This class sends queries to the database, which then results the attendance records in the form of a table through the resultset java functionality.
 package attendB;
 
 import java.awt.BorderLayout;
