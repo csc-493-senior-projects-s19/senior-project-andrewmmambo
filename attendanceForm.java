@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
 @SuppressWarnings("unused")
+//This class gives feedback to the faculty when they try to make an alteration or addition to an attendance record.
+
 public class attendanceForm extends JFrame {
 	/**
 	 * 
