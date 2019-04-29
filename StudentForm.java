@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+// This class allows student to be added successfully to the student’s table. This class is currently not being utilized now though and it is for testing purposes.
 public class StudentForm extends JFrame {
 	/**
 	 * 
