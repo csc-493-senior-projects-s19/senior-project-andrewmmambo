@@ -22,6 +22,7 @@ import javax.swing.JPasswordField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ImageIcon;
 
+//	This class allows the student to login and verifies whether the student has inputted in the correct login details.
 @SuppressWarnings("unused")
 public class StudentLogin extends JFrame {
 	/**
