@@ -22,6 +22,8 @@ import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 
 @SuppressWarnings("unused")
+//This class allows the faculty to login and verifies whether the faculty has inputted in the correct login details.
+
 public class FacultyLogin extends JFrame {
 	/**
 	 * 
