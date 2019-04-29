@@ -1,6 +1,9 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.sql.*;
+//this class allows queries to be sent that make changes to student details
 public class StudentDao {
 
 	
@@ -8,6 +11,7 @@ public class StudentDao {
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
+			// this query allow student details to be added into the database
 			PreparedStatement ps=con.prepareStatement("insert into students(name,password,email,address,studentid,courses) values(?,?,?,?,?,?)");
 			ps.setString(1,name);
 			ps.setString(2,password);
@@ -21,7 +25,8 @@ public class StudentDao {
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("delete from students where id=?");
+			//this query allows a student record to be deleted from the attendance table
+			PreparedStatement ps=con.prepareStatement("delete from attendance where id=?");
 			ps.setInt(1,id);
 			status=ps.executeUpdate();
 			con.close();

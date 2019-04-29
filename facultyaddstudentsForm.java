@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -20,6 +22,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ImageIcon;
 
 @SuppressWarnings("unused")
+
+//this class allows faculty to add student details. It is a back up class. It is currently not being implemented.
 public class facultyaddstudentsForm extends JFrame {
 	/**
 	 * 
@@ -111,10 +115,10 @@ public class facultyaddstudentsForm extends JFrame {
 		textField_4.setBounds(714, 495, 167, 20);
 		textField_4.setColumns(10);
 		
-		JButton btnAddBooks = new JButton("Add attendance");
-		btnAddBooks.setBounds(596, 547, 180, 31);
-		btnAddBooks.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnAddBooks.addActionListener(new ActionListener() {
+		JButton btnAddattendance = new JButton("Add attendance");
+		btnAddattendance.setBounds(596, 547, 180, 31);
+		btnAddattendance.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnAddattendance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			String studentid=textField.getText();
 			String studentname=textField_1.getText();
@@ -154,7 +158,7 @@ public class facultyaddstudentsForm extends JFrame {
 		contentPane.add(textField_2);
 		contentPane.add(textField_1);
 		contentPane.add(textField);
-		contentPane.add(btnAddBooks);
+		contentPane.add(btnAddattendance);
 		contentPane.add(btnBack);
 		
 		JLabel label = new JLabel("");

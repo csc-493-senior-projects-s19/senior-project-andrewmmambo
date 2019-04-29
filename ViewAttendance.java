@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.BorderLayout;
@@ -50,7 +52,7 @@ public class ViewAttendance extends JFrame {
 		String column[]=null;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select * from attendance",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			PreparedStatement ps=con.prepareStatement("select * from editattend",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet rs=ps.executeQuery();
 			
 			ResultSetMetaData rsmd=rs.getMetaData();

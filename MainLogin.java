@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -17,6 +19,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 
+// this class aloows the user to choose their login usertype, either as a student or as a faculty member
 public class MainLogin extends JFrame {
 	/**
 	 * 
@@ -30,6 +33,8 @@ public class MainLogin extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			
+		// initiates the main login window
 			public void run() {
 				try {
 					frame= new MainLogin();
@@ -58,7 +63,7 @@ public class MainLogin extends JFrame {
 		JLabel lblStudentManagement = new JLabel("BereaATTEND-a class attendance management tool");
 		lblStudentManagement.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblStudentManagement.setForeground(Color.CYAN);
-		
+		// allows the faculty to input login details
 		JButton btnFacultyLogin = new JButton("Faculty Login");
 		btnFacultyLogin.setForeground(Color.BLACK);
 		btnFacultyLogin.addActionListener(new ActionListener() {
@@ -68,7 +73,7 @@ public class MainLogin extends JFrame {
 			}
 		});
 		btnFacultyLogin.setFont(new Font("Tahoma", Font.BOLD, 18));
-		
+		//allows the student to input login details
 		JButton btnStudentLogin = new JButton("Student Login");
 		btnStudentLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

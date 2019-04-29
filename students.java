@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.BorderLayout;
@@ -13,6 +15,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 
+// this class gets and retrieves all the data from the student table in the database.
 public class students extends JFrame {
 
 	/**
@@ -49,9 +52,11 @@ public class students extends JFrame {
 		String column[]=null;
 		try{
 			Connection con=DB.getConnection();
+			//Query to retrieve the data.
 			PreparedStatement ps=con.prepareStatement("select * from students",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet rs=ps.executeQuery();
 			
+			//starts creating tables for displaying the data from the database
 			ResultSetMetaData rsmd=rs.getMetaData();
 			int cols=rsmd.getColumnCount();
 			column=new String[cols];

@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -54,7 +56,7 @@ public class StudentForm extends JFrame {
 	 */
 	public StudentForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 450);
+		setBounds(100, 100, 1320, 700);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -68,6 +70,8 @@ public class StudentForm extends JFrame {
 		JLabel lblPassword = new JLabel("Password:");
 		
 		JLabel lblEmail = new JLabel("Email:");
+		
+		
 		
 		
 		textField = new JTextField();

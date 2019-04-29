@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -37,6 +39,7 @@ public class StudentLogin extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				//initiates the student login main window
 				try {
 					frame = new StudentLogin();
 					frame.setVisible(true);
@@ -58,7 +61,7 @@ public class StudentLogin extends JFrame {
 		contentPane.setBackground(Color.DARK_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
+		// allows the student to input their login details
 		JLabel lblFacultyLoginForm = new JLabel("Student Login");
 		lblFacultyLoginForm.setBounds(567, 253, 125, 22);
 		lblFacultyLoginForm.setForeground(Color.CYAN);
@@ -86,7 +89,8 @@ public class StudentLogin extends JFrame {
 			String name=textField.getText();
 			String password=String.valueOf(passwordField.getPassword());
 			//System.out.println(name+" "+password);
-			if(StudentDao.validate(name, password)){
+			
+			if(StudentDao.validate(name, password)){ //tries to verify the login details by calling another class that interacts with the database
 				StudentSuccess.main(new String[]{});
 				frame.dispose();
 			}else{
@@ -100,14 +104,14 @@ public class StudentLogin extends JFrame {
 		passwordField = new JPasswordField();
 		passwordField.setBounds(540, 420, 184, 20);
 		
-		JLabel lblBereaattendAClass = new JLabel("BereaATTEND- a class attendance management tool");
+		JLabel lblBereaattendAClass = new JLabel("BereaATTEND- a class attendance management tool");// sets the title on the GUI
 		lblBereaattendAClass.setForeground(Color.CYAN);
 		lblBereaattendAClass.setBounds(330, 5, 621, 29);
 		lblBereaattendAClass.setFont(new Font("Tahoma", Font.BOLD, 24));
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(515, 45, 224, 197);
-		lblNewLabel.setIcon(new ImageIcon(StudentLogin.class.getResource("/attendB/clocks.png")));
+		lblNewLabel.setIcon(new ImageIcon(StudentLogin.class.getResource("/attendB/clocks.png"))); // sets the logo on the GUI
 		contentPane.setLayout(null);
 		contentPane.add(lblEnterPassword);
 		contentPane.add(lblEnterName);

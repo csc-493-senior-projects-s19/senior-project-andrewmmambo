@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -14,6 +16,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+
+//THIS CLASS ALLOWS THE FACULTY TO MAKE SEVERAL FUNCTIONAL OPTIONS ONCE THEY SUCCESSFULLY LOGIN
 @SuppressWarnings("unused")
 public class FacultySuccess extends JFrame {
 	/**
@@ -58,8 +62,8 @@ public class FacultySuccess extends JFrame {
 		lblAdminSection.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblAdminSection.setForeground(Color.CYAN);
 		
-		JButton btnNewButton = new JButton("Edit attendance");
-		btnNewButton.setBounds(542, 376, 181, 49);
+		JButton btnNewButton = new JButton("Take attendance"); // allows the faculty to record the attendance of a student.
+		btnNewButton.setBounds(502, 376, 266, 49);
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -68,8 +72,8 @@ public class FacultySuccess extends JFrame {
 			}
 		});
 		
-		JButton btnViewStudent = new JButton("View Student");
-		btnViewStudent.setBounds(542, 451, 181, 49);
+		JButton btnViewStudent = new JButton("View Student");// allows the faculty to view the student attendance record.
+		btnViewStudent.setBounds(502, 451, 266, 49);
 		btnViewStudent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			ViewAttendance.main(new String[]{});
@@ -77,8 +81,8 @@ public class FacultySuccess extends JFrame {
 		});
 		btnViewStudent.setFont(new Font("Tahoma", Font.BOLD, 18));
 		
-		JButton btnDeleteStudent = new JButton("Delete Student");
-		btnDeleteStudent.setBounds(542, 527, 181, 49);
+		JButton btnDeleteStudent = new JButton("Delete Student Attendance"); // allows the faculty to delete the student attendance record
+		btnDeleteStudent.setBounds(502, 527, 266, 49);
 		btnDeleteStudent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			DeleteStudent.main(new String[]{});
@@ -103,14 +107,14 @@ public class FacultySuccess extends JFrame {
 		contentPane.add(btnViewStudent);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblBereaattendAClass = new JLabel("BereaATTEND- a class attendance management tool");
+		JLabel lblBereaattendAClass = new JLabel("BereaATTEND- a class attendance management tool"); // sets the title on the GUI
 		lblBereaattendAClass.setForeground(Color.CYAN);
 		lblBereaattendAClass.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblBereaattendAClass.setBounds(364, 11, 621, 40);
 		contentPane.add(lblBereaattendAClass);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(FacultySuccess.class.getResource("/attendB/clocks.png")));
+		label.setIcon(new ImageIcon(FacultySuccess.class.getResource("/attendB/clocks.png"))); // SETS THE LOGO ON THE GUI
 		label.setBounds(523, 79, 226, 233);
 		contentPane.add(label);
 	}

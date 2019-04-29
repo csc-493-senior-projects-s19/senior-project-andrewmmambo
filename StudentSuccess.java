@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -15,6 +17,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
+
+// THIS CLASS ALLOWS THE STUDENT TO MAKE SEVERAL FUNCTIONAL OP[TIONS ONCE THEY SUCCESSFULLY LOGIN
 @SuppressWarnings("unused")
 public class StudentSuccess extends JFrame {
 	/**

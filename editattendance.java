@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -18,7 +20,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
-
+// this class allows the faculty member to make changes to the attendance record of a student. it calls the attendance DAO class for the database interactions.
 @SuppressWarnings("unused")
 public class editattendance extends JFrame {
 	/**
@@ -106,7 +108,7 @@ public class editattendance extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		
 		JButton btnBack = new JButton("Back");
-		btnBack.setBounds(633, 551, 77, 31);
+		btnBack.setBounds(621, 551, 116, 31);
 		btnBack.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -123,7 +125,7 @@ public class editattendance extends JFrame {
 				String studentid=textField.getText();
 				String studentname=textField_1.getText();
 				int i=editattendanceDao.delete(studentid, studentname);
-				if(i>0){
+				if(i<1){
 					JOptionPane.showMessageDialog(editattendance.this,"Counted absent!");
 					FacultySuccess.main(new String[]{});
 					frame.dispose();

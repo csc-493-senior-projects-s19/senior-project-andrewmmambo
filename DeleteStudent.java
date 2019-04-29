@@ -1,3 +1,4 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
 package attendB;
 
 import java.awt.EventQueue;
@@ -14,6 +15,8 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+//this class allows a student record to be deleted
 
 public class DeleteStudent extends JFrame {
 	/**
@@ -55,6 +58,7 @@ public class DeleteStudent extends JFrame {
 		textField = new JTextField();
 		textField.setColumns(10);
 		
+		// it requires the student id to be able to delete a record.
 		JButton btnDelete = new JButton("Delete");
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

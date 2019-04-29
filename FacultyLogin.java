@@ -1,3 +1,5 @@
+// written by Marima Andrew Mambondiumwe for CSC 493, Spring 2019
+
 package attendB;
 
 import java.awt.EventQueue;
@@ -58,7 +60,7 @@ public class FacultyLogin extends JFrame {
 		contentPane.setBackground(Color.DARK_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
+		//allows the faculty member to input their login details
 		JLabel lblAdminLoginForm = new JLabel("Faculty Login");
 		lblAdminLoginForm.setBounds(556, 306, 119, 22);
 		lblAdminLoginForm.setForeground(Color.CYAN);
@@ -85,7 +87,7 @@ public class FacultyLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			String name=textField.getText();
 			String password=String.valueOf(passwordField.getPassword());
-			if(name.equals("b001")&&password.equals("beloved")){
+			if(name.equals("b001")&&password.equals("beloved")){ // checks whether the faculty member inputted the correct login details
 				FacultySuccess.main(new String[]{});
 				frame.dispose();
 			}else{
@@ -113,7 +115,7 @@ public class FacultyLogin extends JFrame {
 		contentPane.add(lblBereaattendAClass);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(FacultyLogin.class.getResource("/attendB/clocks.png")));
+		label.setIcon(new ImageIcon(FacultyLogin.class.getResource("/attendB/clocks.png"))); // sets the logo on the GUI
 		label.setBackground(new Color(240, 240, 240));
 		label.setBounds(503, 55, 224, 240);
 		contentPane.add(label);
